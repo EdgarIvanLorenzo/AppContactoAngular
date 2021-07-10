@@ -1,0 +1,19 @@
+<app-navegacion
+  [identificador]="this.id"
+  [usuario]="this.usuario"
+></app-navegacion>
+<div id="note_global">
+  <h1>Crear Notas</h1>
+  <form action="" #formulario="ngForm">
+    <input type="text" placeholder="Ingrese el titulo de la nota" [(ngModel)]="this.note.titulo" name="titulo"/><br />
+    <textarea [(ngModel)]="this.note.texto" name="texto" id="" cols="30" rows="10" ></textarea>
+  </form>
+  <div id="botones">
+    <button (click)="Start()" id="inicio">Grabar</button><br />
+    <button (click)="End()" id="final">Detener</button>
+  </div>
+  <section>
+    <button (click)="Enviar()">Guardar</button>
+    <button (click)="Cancelar(formulario)">Cancelar</button>
+  </section>
+</div>

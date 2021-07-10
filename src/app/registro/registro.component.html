@@ -1,0 +1,29 @@
+<div id="principal">
+  <div id="Logo">
+    <div class="logo">
+
+    </div>
+  </div>
+  <div id="registro" >
+    <img src="../../assets/perfil/logo.png" alt="" id="logo-contact" />
+    <h1 class="title">{{title}}</h1>
+    <form id="formulario" #formulario="ngForm" (submit)="registroUser()">
+      <input type="text" placeholder="Nombre" name="nombre"
+      pattern="(([a-zA-ZñÑ]+)([\' ']*)([a-zA-ZñÑ]*))+" [(ngModel)]="registro.nombre" #nombre="ngModel" required>
+      <label *ngIf="nombre.touched && nombre.invalid" class="Error">Error</label>
+
+      <input type="text" placeholder="Usuario" name="usuario"
+      pattern="(([a-zA-zÑñ_0-9-]+)([\' ']*))" [(ngModel)]="registro.usuario" #usuario="ngModel" required>
+      <label *ngIf="usuario.touched&& usuario.invalid" class="Error">Error</label>
+
+      <input type="password" placeholder="Contraseña" name="contra"
+      pattern="(([a-zA-Z0-9]{8,10}))" [(ngModel)]="registro.contrasena"  #contra="ngModel" required>
+      <label *ngIf="contra.touched && contra.invalid" class="Error">Error</label>
+
+      <input type="submit" value="Iniciar"  [disabled]="formulario.form.invalid">
+    </form>
+    <hr>
+    <p class="enlace"><a [routerLink]="['/login']">{{sesion}}</a></p>
+  </div>
+
+</div>

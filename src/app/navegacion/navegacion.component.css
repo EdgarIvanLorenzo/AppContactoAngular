@@ -1,0 +1,68 @@
+#navegacion {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 250px;
+  height: 40px;
+  display: inline-flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+.usuario {
+  width: 80%;
+  height: 100%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.opciones{
+  position: absolute;
+  width: 80%;
+  height: auto;
+  background: rgba(255, 255, 255,0.2);
+  top: 100%;
+  display:none;
+}
+.opciones>ul{
+  list-style: none;
+  width:100%;
+}
+ul>li{
+  width: 100%;
+  height:30px;
+  display:flex;
+  align-items:center;
+}
+.opciones>ul>li>a:hover{
+  color: white;
+}
+ul>li>a{
+  text-decoration: none;
+  color: black;
+}
+.usuario > img {
+  width: 30%;
+  height: 70%;
+}
+.cerrar_sesion {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.cerrar_sesion > img {
+  width: 50%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#navegacion > .cerrar_sesion:hover {
+  background: rgba(255, 255, 255,0.8);
+  cursor: pointer;
+}
+#navegacion > .usuario:hover {
+  background: rgba(255, 255, 255,0.8);
+  cursor: pointer;
+}

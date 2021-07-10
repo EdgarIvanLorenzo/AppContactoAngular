@@ -1,0 +1,40 @@
+<app-navegacion [identificador]="this.id" [usuario]="this.usuario"></app-navegacion>
+<div class="contacto" *ngFor="let contacto of contactos; let indice=index">
+  <div id="perfil">
+    <img *ngIf="this.contactos[indice].images" src="{{'http://192.168.1.71:3709/imagen/'+this.contactos[indice].images}}" alt="" class="perfil">
+    <img *ngIf="!this.contactos[indice].images" src="../../assets/user.svg" alt="" class="perfil">
+    <h1 class="nombre">{{this.contactos[indice].nombre}}</h1>
+    <button (click)="modificar(this.contactos[indice]._id)">Modificar</button>
+    <button (click)="eliminar(this.contactos[indice]._id)">Eliminar</button>
+  </div>
+  <div id="info">
+    <h2 class="nombre">{{this.contactos[indice].nombre+" "+this.contactos[indice].apellidos}}</h2>
+   <div class="redes">
+    <div>
+      <img src="../../assets/icons/phone-call.svg" alt="" class="icons">
+      <label for="">{{this.contactos[indice].numero}}</label>
+    </div>
+    <div>
+      <img src="../../assets/icons/facebook.svg" alt="" class="icons" >
+      <label for="">{{this.contactos[indice].facebook}}</label>
+    </div>
+   <div>
+    <img src="../../assets/icons/instagram.svg" alt="" class="icons">
+    <label for="">{{this.contactos[indice].instagram}}</label>
+   </div>
+    <div>
+      <img src="../../assets/icons/whatsapp.svg" alt="" class="icons">
+      <label for="">{{this.contactos[indice].numero}}</label>
+    </div>
+    <div>
+      <img src="../../assets/icons/gorjeo.svg" alt="" class="icons">
+      <label for="">{{this.contactos[indice].twitter}}</label>
+    </div>
+    <div>
+      <img src="../../assets/icons/gmail.svg" alt="" class="icons">
+      <label for="">{{this.contactos[indice].gmail}}</label>
+    </div>
+   </div>
+  </div>
+</div>
+

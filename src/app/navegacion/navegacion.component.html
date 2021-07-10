@@ -1,0 +1,16 @@
+<div id="navegacion">
+  <div class="usuario" (mouseover)="mostrar()" (mouseout)="salir()">
+    <img src="../../assets/user.svg" alt=""> {{usuario}}
+    <div class="opciones" [ngStyle]="estilo">
+      <ul>
+        <li><a [routerLink]="['/main/'+identificador]">Home</a></li>
+        <li><a [routerLink]="['/form/'+identificador]">Crear Contacto</a></li>
+        <li><a [routerLink]="['/note/'+identificador]">Crear Nota</a></li>
+        <li><a [routerLink]="['/allnotes/'+identificador]">Ver Notas</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cerrar_sesion" (click)="cerrar()">
+    <img src="../../assets/on-off-button.svg" alt="">
+  </div>
+</div>

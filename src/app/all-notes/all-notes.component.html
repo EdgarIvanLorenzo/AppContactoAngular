@@ -1,0 +1,12 @@
+<app-navegacion [identificador]="this.id" [usuario]="this.usuario"></app-navegacion>
+<h1>Notas</h1>
+<div id="all-notes">
+  <section *ngFor="let item of this.notas">
+    <h2>{{item.titulo}}</h2>
+    <p>
+      {{item.texto}}
+      <br><br><span>{{item.fecha}}</span>
+    </p>
+    <button id="eliminar" (click)="Eliminar(item._id)">Eliminar</button>
+  </section>
+</div>

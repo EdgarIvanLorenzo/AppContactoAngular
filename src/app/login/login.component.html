@@ -1,0 +1,15 @@
+<div id="principal">
+  <div id="Logo">
+    <div class="logo"></div>
+  </div>
+  <div id="registro">
+    <h1 class="title">{{ title }}</h1>
+    <form id="formulario" #formulario (submit)="login(formulario)">
+      <img src="../../assets/user.svg" alt="" class="icons" />
+      <input type="text" placeholder="Usuario" [(ngModel)]="login2.usuario" name="usuario"/><br />
+      <img src="../../assets/lock.svg" alt="" class="icons" />
+      <input type="password" placeholder="Contraseña" [(ngModel)]="login2.contrasena" name="contraseña"/>
+      <input type="submit" value="LOGIN" />
+    </form>
+  </div>
+</div>

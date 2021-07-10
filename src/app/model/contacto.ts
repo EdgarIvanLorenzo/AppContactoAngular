@@ -1,0 +1,23 @@
+export class Modelo{
+  _id:number;
+  nombre:string;
+  apellidos:string;
+  numero:string;
+  facebook:string;
+  instagram:string;
+  twitter:string;
+  gmail:string;
+  images:string;
+  constructor(id:number,nombre:string,apellido:string,numero:string,facebook:string,instagram:string,
+    twitter:string,gmail:string,images:string){
+    this._id=id;
+    this.nombre=nombre;
+    this.apellidos=apellido;
+    this.numero=numero;
+    this.facebook=facebook;
+    this.instagram=instagram;
+    this.twitter=twitter;
+    this.gmail=gmail;
+    this.images=images;
+  }
+}

@@ -1,0 +1,42 @@
+<app-navegacion [identificador]="this.idP" [usuario]="this.usuarioP"></app-navegacion>
+<div id="principal">
+  <div id="Logo">
+    <img src="../../assets/perfil/logo.png" alt="">
+  </div>
+  <div id="create">
+    <h1 class="title">{{Title}}</h1>
+    <form id="formulario" #formulario="ngForm" (submit)="Enviar()">
+      <input type="text" placeholder="Nombre" name="nombre"
+      pattern="(([a-zA-ZñÑ]+)([\' ']*))+" [(ngModel)]="usuario.nombre" #nombre="ngModel" required>
+      <label for="" *ngIf="nombre.touched && nombre.invalid" class="Error">Error</label>
+
+      <input type="text" placeholder="Apellidos" name="apellido"
+      pattern="(([a-zA-ZñÑ]+)([\' ']*))+" [(ngModel)]="usuario.apellidos" #apellido="ngModel" required>
+      <label for="" *ngIf="apellido.touched && apellido.invalid" class="Error">Error</label>
+
+      <input type="text" placeholder="Numero Telefonico" name="telefono"
+      pattern="([0-9]{10})"  [(ngModel)]="usuario.numero" #telefono="ngModel" required>
+      <label for="" *ngIf="telefono.touched && telefono.invalid" class="Error">Error</label>
+
+      <input type="text" placeholder="Facebook" name="facebook"
+      pattern="(([a-zA-Z-_ñÑ0-9]+)([\' ']*))+" [(ngModel)]="usuario.facebook" #facebook="ngModel">
+      <label for="" *ngIf="facebook.touched && facebook.invalid" class="Error">Error</label>
+
+      <input type="text" placeholder="Instagram" name="instagram"
+      pattern="(([a-zA-Z-_ñÑ0-9]+)([\' ']*))+" [(ngModel)]="usuario.instagram" #instagram="ngModel">
+      <label for="" *ngIf="instagram.touched && instagram.invalid" class="Error">Error</label>
+
+      <input type="text" placeholder="Twitter"  name="twitter"
+      pattern="(([a-zA-Z-_ñÑ0-9]+)([\' ']*))+" [(ngModel)]="usuario.twitter" #twitter="ngModel">
+      <label for="" *ngIf="twitter.touched && twitter.invalid" class="Error">Error</label>
+
+
+      <input type="text" placeholder="Gmail" name="gmail"
+      pattern="(([a-zA-Z0-9]+)([@])([a-z]+)([\.])([a-z]+))" [(ngModel)]="usuario.gmail" #gmail="ngModel">
+      <label for="" *ngIf="gmail.touched && gmail.invalid" class="Error">Error</label>
+
+      <input type="file" #img placeholder="Imagen" (change)="cargarImagen($event)" >
+      <input type="submit" [disabled]="formulario.form.invalid">
+    </form>
+  </div>
+</div>
